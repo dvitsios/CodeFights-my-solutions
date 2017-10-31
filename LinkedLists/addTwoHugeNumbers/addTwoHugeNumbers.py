@@ -5,20 +5,11 @@
 #     self.next = None
 #
 def get_num(a):
-    cnt_a = 1
-    a_num = ''
-    while a.next != None:
-        
-        if cnt_a:
-            cnt_a = 0        
-            a_num += str(a.value)
-        else:
-            a_num += ('0' * (4 - len(str(a.value)))) + str(a.value)
-                      
-        a = a.next
-    a_num += ('0' * (4 - len(str(a.value)))) + str(a.value)
+    hackedlist=[]
+    for i in a:
+        hackedlist.append(str(i))
 
-    return int(a_num)
+    return int(''.join(hackedlist))
 
 def addTwoHugeNumbers(a, b):
 
